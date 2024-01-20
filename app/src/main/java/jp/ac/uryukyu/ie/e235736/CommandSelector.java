@@ -13,8 +13,14 @@ public class CommandSelector {
         commands = new ArrayList<>();
     }
 
-    
-    
+    public void addCommand(String command_name) {
+        commands.add(command_name);
+    }
+
+    public void clearCommands() {
+        commands.clear();
+
+    }
 
     
     public int waitForUsersCommand(String prompt) {
