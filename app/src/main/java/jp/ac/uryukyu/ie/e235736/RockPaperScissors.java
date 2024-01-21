@@ -1,6 +1,12 @@
 package jp.ac.uryukyu.ie.e235736;
 import java.util.ArrayList;
 import java.util.Random;
+
+/**
+ * RockPaperScissorsクラス
+ * じゃんけんをプレイ可能にする
+ * @author　e235736
+ */
 public class RockPaperScissors extends MiniGame{
     ArrayList<String> handSigns;
     public RockPaperScissors(String name){
@@ -13,6 +19,11 @@ public class RockPaperScissors extends MiniGame{
 
     Random rand=new Random();
 
+    /**
+     * playGameメソッド
+     * じゃんけんをプレイさせる
+     * MiniGameクラスのものをオーバーライドしている
+     */
     @Override
     public void playGame(String playerName){
         int count = 0;
@@ -31,9 +42,16 @@ public class RockPaperScissors extends MiniGame{
             System.out.println(playerName+"さんは"+handSigns.get(playerJankenNumber)+"を出しました！");
             System.out.println("私の息子は"+enemyJanken+"を出しました！");
             this.jankenJudge(playerJankenNumber,enemyJanken,playerName);
-        }//50行以内になるよう短くする
+        }
     }
 
+    /**
+     * jankenJudgeメソッド
+     * じゃんけんの勝ち負け，あいこを判定する
+     * @param playerJankenNumber int型:プレイヤーが選択したhandsignsのインデックス
+     * @param enemyJanken String型:相手が選択した手
+     * @param playerName　String型:プレイヤー名
+     */
     public void jankenJudge(int playerJankenNumber,String enemyJanken,String playerName){
         switch(handSigns.get(playerJankenNumber)){
             case "グー":

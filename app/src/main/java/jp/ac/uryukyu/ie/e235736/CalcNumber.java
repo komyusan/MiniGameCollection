@@ -2,8 +2,19 @@ package jp.ac.uryukyu.ie.e235736;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * CalcNumberクラス
+ * 足し算ゲームをプレイ可能にする
+ * @author　e235736
+ */
 public class CalcNumber extends MiniGame{
     Scanner scanner;
+
+    /**
+     * CalcNumberコンストラクタ
+     * 名前とscannerの設定をする
+     * @param name　String型:ゲーム名
+     */
     public CalcNumber(String name){
         super(name);
         scanner = new Scanner(System.in);
@@ -11,6 +22,11 @@ public class CalcNumber extends MiniGame{
 
     Random rand=new Random();
 
+    /**
+     * playGameメソッド
+     * 足し算ゲームをプレイさせる
+     * MiniGameクラスのものをオーバーライドしている
+     */
     @Override
     public void playGame(String playerName){
         System.out.println("ルール説明をします");
@@ -29,6 +45,11 @@ public class CalcNumber extends MiniGame{
         }
     }
 
+    /**
+     * calcJudgeメソッド
+     * プレイヤーに答えを入力させ，答えと合っているか判定する
+     * @param total int型:答え
+     */
     public void calcJudge(int total){
         while(true) {
             int playerAnswer = scanner.nextInt();

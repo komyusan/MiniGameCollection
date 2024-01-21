@@ -6,12 +6,27 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
+/**
+ * BigNumberTestクラス
+ * BigNumberクラスのテストを行う
+ * @author　e235736
+ */
 public class BigNumberTest {
+    /**
+     * restoreSystemInメソッド
+     * System.inをテストメソッドの後に元の状態にリセットする
+     * 何も引数を受け取らない
+     */
     @AfterEach
     void restoreSystemIn() {
         System.setIn(System.in);
     }
 
+    /**
+     * playGameメソッド
+     * テストメソッドであり，数字が大きい方が勝ちゲーム終了時，相手の手札が0枚であることをテストする
+     * 何も引数を受け取らない
+     */
     @Test
     void playGame(){
         String input = "0\n0\n0\n0\n0\n";

@@ -2,9 +2,20 @@ package jp.ac.uryukyu.ie.e235736;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * BigNumberクラス
+ * 数字が大きい方が勝ちゲームをプレイ可能にする
+ * @author　e235736
+ */
 public class BigNumber extends MiniGame{
     ArrayList<String> cards;
     ArrayList<Integer> enemyCards;
+
+    /**
+     * BigNumberコンストラクタ
+     * ゲーム名と，プレイヤーと相手の手札を作成する。
+     * @param name String型:ゲーム名
+     */
     public BigNumber(String name){
         super(name);
         cards =new ArrayList<>();
@@ -19,6 +30,11 @@ public class BigNumber extends MiniGame{
 
     Random rand=new Random();
 
+    /**
+     * playGameメソッド
+     * 数字が大きい方が勝ちゲームをプレイさせる
+     * MiniGameクラスのものをオーバーライドしている
+     */
     @Override
     public void playGame(String playerName){
         int gameCount =0;
@@ -58,6 +74,11 @@ public class BigNumber extends MiniGame{
         System.out.println(vicCount+"勝"+loCount+"敗"+draCount+"引き分けです");
     }
 
+    /**
+     * explainメソッド
+     * ゲームのルール説明等を行う
+     * @param playerName String型:プレイヤー名
+     */
     public void explain(String playerName){
         System.out.println("ルール説明をします");
         System.out.println(playerName+"さんには私の息子と勝負してもらいます");
