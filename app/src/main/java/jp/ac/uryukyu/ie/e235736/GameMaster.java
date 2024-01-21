@@ -15,7 +15,8 @@ public class GameMaster {
         minigames.add(janken);
         MiniGame tasizan = new CalcNumber("足し算ゲーム");
         minigames.add(tasizan);
-        
+        MiniGame bigN = new BigNumber("数字大きい方が勝ちゲーム");
+        minigames.add(bigN);
     }
 
     public void opening(){

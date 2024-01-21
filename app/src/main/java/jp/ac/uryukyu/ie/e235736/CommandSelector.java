@@ -17,6 +17,9 @@ public class CommandSelector {
         commands.add(command_name);
     }
 
+    public void remCommand(int number){
+        commands.remove(number);
+    }
     public void clearCommands() {
         commands.clear();
 

@@ -28,7 +28,7 @@ public class RockPaperScissors extends MiniGame{
             String enemyJankenNumber = handSigns.get(rand.nextInt(handSigns.size()));
             System.out.println(count+"回戦です");
             var playerJankenNumber = commandSelector.waitForUsersCommand("何を出しますか");
-            System.out.println(playerName+"は"+handSigns.get(playerJankenNumber)+"を出しました！");
+            System.out.println(playerName+"さんは"+handSigns.get(playerJankenNumber)+"を出しました！");
             System.out.println("私の息子は"+enemyJankenNumber+"を出しました！");
             if(handSigns.get(playerJankenNumber).equals("グー")){
                 switch (enemyJankenNumber) {
@@ -36,7 +36,7 @@ public class RockPaperScissors extends MiniGame{
                         System.out.println("あいこです");
                         break;
                     case "チョキ":
-                        System.out.println(playerName+"の勝ちです");
+                        System.out.println(playerName+"さんの勝ちです");
                         break;
                     case "パー":
                     System.out.println("私の息子の勝ちです");
@@ -52,14 +52,14 @@ public class RockPaperScissors extends MiniGame{
                         System.out.println("あいこです");
                         break;
                     case "パー":
-                        System.out.println(playerName+"の勝ちです");
+                        System.out.println(playerName+"さんの勝ちです");
                         break;
                 }
             }
             if(handSigns.get(playerJankenNumber).equals("パー")){
                 switch (enemyJankenNumber) {
                     case "グー":
-                        System.out.println(playerName+"の勝ちです");
+                        System.out.println(playerName+"さんの勝ちです");
                         break;
                     case "チョキ":
                         System.out.println("私の息子の勝ちです");
@@ -70,7 +70,7 @@ public class RockPaperScissors extends MiniGame{
                 }
 
             }
-        }//じゃんけんまで終わったらpush
+        }//50行以内になるよう短くする
         //ポイントは一旦ほっとく
         
         
