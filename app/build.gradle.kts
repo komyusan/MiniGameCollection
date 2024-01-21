@@ -54,3 +54,6 @@ tasks.withType<Jar> {
     }
 }
 
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
