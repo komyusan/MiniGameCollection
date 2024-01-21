@@ -25,13 +25,19 @@ public class RockPaperScissors extends MiniGame{
         }
         for(int i=0;i<3;i++){
             count++;
-            String enemyJankenNumber = handSigns.get(rand.nextInt(handSigns.size()));
+            String enemyJanken = handSigns.get(rand.nextInt(handSigns.size()));
             System.out.println(count+"回戦です");
             var playerJankenNumber = commandSelector.waitForUsersCommand("何を出しますか");
             System.out.println(playerName+"さんは"+handSigns.get(playerJankenNumber)+"を出しました！");
-            System.out.println("私の息子は"+enemyJankenNumber+"を出しました！");
-            if(handSigns.get(playerJankenNumber).equals("グー")){
-                switch (enemyJankenNumber) {
+            System.out.println("私の息子は"+enemyJanken+"を出しました！");
+            this.jankenJudge(playerJankenNumber,enemyJanken,playerName);
+        }//50行以内になるよう短くする
+    }
+
+    public void jankenJudge(int playerJankenNumber,String enemyJanken,String playerName){
+        switch(handSigns.get(playerJankenNumber)){
+            case "グー":
+                switch (enemyJanken) {
                     case "グー":
                         System.out.println("あいこです");
                         break;
@@ -42,9 +48,9 @@ public class RockPaperScissors extends MiniGame{
                     System.out.println("私の息子の勝ちです");
                         break;
                 }
-            }
-            if(handSigns.get(playerJankenNumber).equals("チョキ")){
-                switch (enemyJankenNumber) {
+                break;
+            case "チョキ":
+                switch (enemyJanken) {
                     case "グー":
                         System.out.println("私の息子の勝ちです");
                         break;
@@ -54,10 +60,10 @@ public class RockPaperScissors extends MiniGame{
                     case "パー":
                         System.out.println(playerName+"さんの勝ちです");
                         break;
-                }
-            }
-            if(handSigns.get(playerJankenNumber).equals("パー")){
-                switch (enemyJankenNumber) {
+                }    
+                break;
+            case "パー":
+                switch (enemyJanken) {
                     case "グー":
                         System.out.println(playerName+"さんの勝ちです");
                         break;
@@ -68,13 +74,8 @@ public class RockPaperScissors extends MiniGame{
                         System.out.println("あいこです");
                         break;
                 }
-
-            }
-        }//50行以内になるよう短くする
-        
-        
-        
+                break;
+        }
     }
-
 
 }
