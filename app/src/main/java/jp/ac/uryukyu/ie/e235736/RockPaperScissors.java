@@ -71,7 +71,6 @@ public class RockPaperScissors extends MiniGame{
 
             }
         }//50行以内になるよう短くする
-        //ポイントは一旦ほっとく
         
         
         

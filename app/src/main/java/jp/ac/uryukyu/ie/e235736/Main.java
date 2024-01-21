@@ -7,5 +7,6 @@ public class Main {
         for(int i=0;i<2;i++){
             gameMaster.selectGame();
         }
+        gameMaster.ending();
     }
 }

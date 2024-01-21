@@ -25,7 +25,6 @@ public class GameMaster {
         playerName = scanner.next();
         System.out.println(playerName+"さん，よろしくお願いします");
         System.out.println("今から2つのミニゲームをします");
-        System.out.println("それぞれのゲームで得られた得点の合計で"+playerName+"さんのランクが決まります");
     }
 
     public void selectGame(){
@@ -38,6 +37,13 @@ public class GameMaster {
         minigames.get(gameNumber).startGame();
         minigames.get(gameNumber).playGame(playerName);
         minigames.remove(gameNumber);
+    }
+
+    public void ending(){
+        System.out.println("以上でミニゲームは終わりです");
+        System.out.println(playerName+"さんと過ごせて楽しかったです");
+        System.out.println("息子も楽しかったようで何よりです");
+        System.out.println("またどこかで！");
     }
 
 }
