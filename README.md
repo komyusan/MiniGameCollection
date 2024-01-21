@@ -9,3 +9,4 @@
 - 7th commit: scannerをjarでも使えるように。
 - 8th commit: BigNumberTestクラスを作成。
 - 9th commit: CommandSelectorクラスを修正し例外処理できるように。またドキュメントを書き始めた。
+- 10th commit: 各種クラス，メソッドのドキュメントを作成。恐らくこれで最後のコミットとなるはず。
