@@ -7,3 +7,4 @@
 - 5th commit: 全体的に整えた。
 - 6th commit: じゃんけんクラスのメソッドが50行を超えないよう調整。
 - 7th commit: scannerをjarでも使えるように。
+- 8th commit: BigNumberTest.javaを作成。
