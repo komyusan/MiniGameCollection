@@ -13,6 +13,8 @@ public class GameMaster {
         scanner = new Scanner(System.in);
         MiniGame janken = new RockPaperScissors("じゃんけん");
         minigames.add(janken);
+        MiniGame tasizan = new CalcNumber("足し算ゲーム");
+        minigames.add(tasizan);
         
     }
 
