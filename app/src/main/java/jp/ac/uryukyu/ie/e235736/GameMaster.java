@@ -1,6 +1,12 @@
 package jp.ac.uryukyu.ie.e235736;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+/**
+ * GameMasterクラス
+ * プレイヤーにミニゲームとその説明を提供する。
+ * @author　e235736
+ */
 public class GameMaster {
     
     Scanner scanner;
@@ -9,6 +15,11 @@ public class GameMaster {
     private int gameCount = 0;
     private ArrayList<MiniGame> minigames = new ArrayList<>();
 
+    /**
+     * GameMasterコンストラクタ
+     * scannerの設定と，ミニゲームのリストへの追加を行う
+     * 何も引数を受け取らない
+     */
     public GameMaster(){
         scanner = new Scanner(System.in);
         MiniGame janken = new RockPaperScissors("じゃんけん");
@@ -19,6 +30,11 @@ public class GameMaster {
         minigames.add(bigN);
     }
 
+    /**
+     * openingメソッド
+     * 挨拶をして，プレイヤーの名前を得る
+     * 何も引数を受け取らない
+     */
     public void opening(){
         System.out.println("初めまして，これからミニゲームをしましょう！");
         System.out.println("あなたの名前を教えて下さい");
@@ -27,6 +43,12 @@ public class GameMaster {
         System.out.println("今から2つのミニゲームをします");
     }
 
+    /**
+     * selectGameメソッド
+     * CommandSelectorクラスを通じてゲーム選択を行わせる
+     * 選択後，ゲームを始めさせる
+     * 何も引数を受け取らない
+     */
     public void selectGame(){
         commandSelector.clearCommands();
         for(var game: minigames){
@@ -39,6 +61,11 @@ public class GameMaster {
         minigames.remove(gameNumber);
     }
 
+    /**
+     * endingメソッド
+     * ゲームプレイ後のエンディングを表示する
+     * 何も引数を受け取らない
+     */
     public void ending(){
         System.out.println("以上でミニゲームは終わりです");
         System.out.println(playerName+"さんと過ごせて楽しかったです");

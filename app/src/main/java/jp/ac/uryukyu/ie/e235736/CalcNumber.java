@@ -25,18 +25,22 @@ public class CalcNumber extends MiniGame{
             int total = number1+number2+number3;
             System.out.println(number1+","+number2+","+number3);
             System.out.println("これらを足し合わせて下さい");
-            while(true) {
-                int playerAnswer = scanner.nextInt();
-                if (playerAnswer==total) {
-                    System.out.println("正解です！");
-                    break;
-                }else{
-                    System.out.println("不正解です");
-                    System.out.println("正解は"+total+"でした");
-                    break;
-                }
-            }  
+            this.calcJudge(total);
         }
+    }
+
+    public void calcJudge(int total){
+        while(true) {
+            int playerAnswer = scanner.nextInt();
+            if (playerAnswer==total) {
+                System.out.println("正解です！");
+                break;
+            }else{
+                System.out.println("不正解です");
+                System.out.println("正解は"+total+"でした");
+                break;
+            }
+        }  
     }
 
 }
