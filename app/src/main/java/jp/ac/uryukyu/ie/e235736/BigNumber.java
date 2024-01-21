@@ -53,13 +53,14 @@ public class BigNumber extends MiniGame{
             int enemyNumber = enemyCards.get(randIndex);
             System.out.println(gameCount+"ターン目です");
             var playerNumber = commandselector.waitForUsersCommand("何を出しますか？");
-            System.out.println(playerName+"さんは"+playerNumber+"を出しました！");
+            System.out.println(playerName+"さんは"+cards.get(playerNumber)+"を出しました！");
             System.out.println("私の息子は"+enemyNumber+"を出しました！");
-            if(playerNumber>enemyNumber){
+            int intPlayerNumber = Integer.parseInt(cards.get(playerNumber));
+            if(intPlayerNumber>enemyNumber){
                 System.out.println(playerName+"さんの勝利です");
                 vicCount++;
             }else{
-               if(playerNumber<enemyNumber){
+               if(intPlayerNumber<enemyNumber){
                 System.out.println("私の息子の勝ちです");
                 loCount++;
                }else{
@@ -67,6 +68,7 @@ public class BigNumber extends MiniGame{
                 draCount++;
                }
             }
+            cards.remove(playerNumber);
             commandselector.remCommand(playerNumber);
             enemyCards.remove(randIndex);
         }
