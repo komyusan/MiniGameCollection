@@ -11,10 +11,9 @@ public class GameMaster {
 
     public GameMaster(){
         scanner = new Scanner(System.in);
-        MiniGame janken = new MiniGame("じゃんけん");
+        MiniGame janken = new RockPaperScissors("じゃんけん");
         minigames.add(janken);
-        MiniGame gomoku = new MiniGame("五目並べ");
-        minigames.add(gomoku);
+        
     }
 
     public void opening(){
@@ -34,6 +33,7 @@ public class GameMaster {
         gameCount++;
         var gameNumber = commandSelector.waitForUsersCommand(gameCount+"回目のゲームはどれにしますか？");
         minigames.get(gameNumber).startGame();
+        minigames.get(gameNumber).playGame(playerName);
         minigames.remove(gameNumber);
     }
 

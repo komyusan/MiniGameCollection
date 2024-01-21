@@ -18,7 +18,7 @@ public class Memo {
     throw-catch構文
     setterを使うときは単にプロパティを上書きするのではなく、
     値の有効性をチェックするなど、安全に変更できるように設計・実装する。
-    scanner使うならteamsの質問箱見て
+    scanner使うならteamsの質問箱見て(gradleの設定とか)
     */
 
 }
