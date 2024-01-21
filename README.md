@@ -7,4 +7,5 @@
 - 5th commit: 全体的に整えた。
 - 6th commit: じゃんけんクラスのメソッドが50行を超えないよう調整。
 - 7th commit: scannerをjarでも使えるように。
-- 8th commit: BigNumberTest.javaを作成。
+- 8th commit: BigNumberTestクラスを作成。
+- 9th commit: CommandSelectorクラスを修正し例外処理できるように。またドキュメントを書き始めた。
