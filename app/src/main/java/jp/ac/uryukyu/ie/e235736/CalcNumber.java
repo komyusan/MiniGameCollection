@@ -64,7 +64,7 @@ public class CalcNumber extends MiniGame{
                     break;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("半角の整数を入力して下さい");
+                System.out.println("整数を入力して下さい");
                 scanner.next();//間違った入力を読み飛ばす
             }
             
