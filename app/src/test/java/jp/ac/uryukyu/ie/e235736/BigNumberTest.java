@@ -28,7 +28,7 @@ public class BigNumberTest {
      * 何も引数を受け取らない
      */
     @Test
-    void playGame(){
+    void playGameTest(){
         String input = "0\n0\n0\n0\n0\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
