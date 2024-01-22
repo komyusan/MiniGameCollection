@@ -1,4 +1,5 @@
 package jp.ac.uryukyu.ie.e235736;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -52,15 +53,21 @@ public class CalcNumber extends MiniGame{
      */
     public void calcJudge(int total){
         while(true) {
-            int playerAnswer = scanner.nextInt();
-            if (playerAnswer==total) {
-                System.out.println("正解です！");
-                break;
-            }else{
-                System.out.println("不正解です");
-                System.out.println("正解は"+total+"でした");
-                break;
+            try {
+                int playerAnswer = scanner.nextInt();
+                if (playerAnswer==total) {
+                    System.out.println("正解です！");
+                    break;
+                }else{
+                    System.out.println("不正解です");
+                    System.out.println("正解は"+total+"でした");
+                    break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("半角の整数を入力して下さい");
+                scanner.next();//間違った入力を読み飛ばす
             }
+            
         }  
     }
 
